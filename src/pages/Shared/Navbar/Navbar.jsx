@@ -27,7 +27,7 @@ const Navbar = () => {
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-5 w-5"
+							className="w-5 h-5"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -48,8 +48,8 @@ const Navbar = () => {
 					</ul>
 				</div>
 			</div>
-			<div className="navbar-center hidden lg:flex">
-				<ul className="menu menu-horizontal px-1">{navLinks}</ul>
+			<div className="hidden navbar-center lg:flex">
+				<ul className="px-1 menu menu-horizontal">{navLinks}</ul>
 			</div>
 			<div className="navbar-end">
 				<div
@@ -64,7 +64,7 @@ const Navbar = () => {
 						/>
 					</div>
 				</div>
-				<Link>
+				<Link to={"/login"}>
 					<button className="btn">Login</button>
 				</Link>
 			</div>
