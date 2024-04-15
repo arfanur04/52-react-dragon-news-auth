@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 
-const Login = () => {
+const Register = () => {
 	//
-	const handleLogin = (e) => {
+	const handleRegister = (e) => {
 		e.preventDefault();
 
 		console.log(e.currentTarget);
@@ -15,11 +15,35 @@ const Login = () => {
 		<div>
 			<Navbar></Navbar>
 			<div>
-				<h2 className="my-10 text-3xl text-center">Please Login</h2>
+				<h2 className="my-10 text-3xl text-center">Please Register</h2>
 				<form
-					onClick={handleLogin}
+					onClick={handleRegister}
 					className="mx-auto card-body lg:w-1/2 md:w-3/4"
 				>
+					<div className="form-control">
+						<label className="label">
+							<span className="label-text">Name</span>
+						</label>
+						<input
+							type="text"
+							name="name"
+							placeholder="Name"
+							className="input input-bordered"
+							required
+						/>
+					</div>
+					<div className="form-control">
+						<label className="label">
+							<span className="label-text">Photo URL</span>
+						</label>
+						<input
+							type="text"
+							name="photo"
+							placeholder="Photo URL"
+							className="input input-bordered"
+							required
+						/>
+					</div>
 					<div className="form-control">
 						<label className="label">
 							<span className="label-text">Email</span>
@@ -53,16 +77,16 @@ const Login = () => {
 						</label>
 					</div>
 					<div className="mt-6 form-control">
-						<button className="btn btn-primary">Login</button>
+						<button className="btn btn-primary">Register</button>
 					</div>
 				</form>
 				<p className="text-center">
-					Don&apos;t have account{" "}
+					Already have a account{" "}
 					<Link
 						className="font-bold text-blue-600"
-						to={"/register"}
+						to={"/login"}
 					>
-						Register
+						Login
 					</Link>
 				</p>
 			</div>
@@ -70,4 +94,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default Register;
